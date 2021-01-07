@@ -1,5 +1,8 @@
-let a = [2, 3, 5];
-let b = a instanceof Object;
-console.log(b);
-let hola = "saludar";
-let saludar;
+/* 5) Programa una función que invierta las palabras 
+de una cadena de texto, pe. miFuncion("Hola Mundo") 
+devolverá "odnuM aloH". */
+
+function invertirCadena(cadena) {
+  return cadena.split("").reverse().join("");
+}
+console.log(invertirCadena("Hola como estas"));

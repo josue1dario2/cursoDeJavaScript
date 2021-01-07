@@ -2,7 +2,7 @@
 caracteres de una cadena de texto, 
 pe. miFuncion("Hola Mundo") devolverá 10. */
 
-function contarLetras(envio) {
+/* function contarLetras(envio) {
   let valor = typeof envio;
   if (envio === null) {
     console.log("El valor ingresado es nulo");
@@ -23,4 +23,22 @@ function contarLetras(envio) {
 
 //let envio;//undefined
 let envio = NaN;
-contarLetras(envio);
+contarLetras(envio); */
+
+//Función declarada
+/* function contarCaracteres(cadena = "") {
+  if (!cadena) {
+    console.warn("No ingresaste ninguna cadena");
+  } else {
+    console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+  }
+} 
+contarCaracteres("hola mundo");
+*/
+//Función expresada = Arrow function
+const contarCarac = (cadena = "") =>
+  !cadena
+    ? console.warn("No ingresaste ninguna cadena")
+    : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+contarCarac("hola mundo como estas");
