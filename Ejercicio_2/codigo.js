@@ -1,7 +1,7 @@
 /* 2) Programa una función que te devuelva el texto
  recortado según el número de caracteres indicados,
   pe. miFuncion("Hola Mundo", 4) devolverá "Hola". */
-
+/* 
 function esString(envio) {
   let valor = typeof envio;
   if (envio === null) {
@@ -32,4 +32,13 @@ function devolverString(palabra, digitos) {
     }
   }
 }
-devolverString("Hola Mundo", 7);
+devolverString("Hola Mundo", 7); */
+
+const recortarTexto = (cadena = "", longitud = undefined) =>
+  !cadena
+    ? console.warn("No ingresaste una cadena de texto")
+    : longitud === undefined
+    ? console.warn("No ingresaste la longitud")
+    : console.info(cadena.slice(0, longitud));
+
+recortarTexto("aprendiendo javascript", 8);
