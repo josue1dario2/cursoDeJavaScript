@@ -1,7 +1,7 @@
 /* 4) Programa una función que repita un texto X veces,
  pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo 
  Hola Mundo Hola Mundo. */
-
+/* 
 function enviarCadena(envio) {
   let valor = typeof envio;
   if (envio === null) {
@@ -40,3 +40,19 @@ function repetirCadena(cadena, veces) {
 let cadena = "hola como estas maquina xd xdxd";
 let veces = 3;
 repetirCadena(cadena, veces);
+ */
+
+const repetir = (cadena = "", veces = undefined) => {
+  if (!cadena) return console.warn("No ingresaste un texto");
+  if (veces === undefined)
+    return console.warn("No ingresaste la cantidad de veces");
+  if (veces === 0)
+    return console.error("El número ingresado no puede ser cero");
+  if (Math.sign(veces) === -1)
+    return console.error("El número ingresado no puede ser negativo");
+  for (let i = 0; i < veces; i++) {
+    console.log(`Repetición nº ${i + 1} cadena: ${cadena}`);
+  }
+};
+
+repetir("Hola mundo", 4);
