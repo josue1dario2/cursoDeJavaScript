@@ -2,7 +2,7 @@
 devuelva un Array de textos separados por cierto 
 caracter, pe. miFuncion('hola que tal', ' ') 
 devolverá ['hola', 'que', 'tal']. */
-
+/* 
 function ingresarCadena(envio) {
   let valor = typeof envio;
   if (envio === null) {
@@ -29,4 +29,12 @@ function convertirCadenaEnArray(envio, caracter) {
 }
 let envio = "Hola como estas maquina";
 let caracter = " ";
-convertirCadenaEnArray(envio, caracter);
+convertirCadenaEnArray(envio, caracter); */
+const cadenaAArreglo = (cadena = "", separador = undefined) =>
+  !cadena
+    ? console.warn("No ingresaste una cadena de texto")
+    : separador === undefined
+    ? console.warn("No ingresaste el separador de la cadena")
+    : console.info(cadena.split(separador));
+
+cadenaAArreglo("hola como estas", " ");
