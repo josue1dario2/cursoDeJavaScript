@@ -2,7 +2,7 @@
 o frase dada, es un palíndromo (que se lee igual 
   en un sentido que en otro), pe. mifuncion("Salas")
    devolverá true. */
-const compararFrase = (cadena = "") => {
+/* const compararFrase = (cadena = "") => {
   if (!cadena) {
     console.warn("No ingresaste una cadena");
   }
@@ -17,4 +17,19 @@ const compararFrase = (cadena = "") => {
   }
 };
 let cadena = "Salas";
-compararFrase(cadena.toLowerCase());
+compararFrase(cadena.toLowerCase()); */
+const palindromo = (palabra = "") => {
+  if (!palabra) return console.warn("No ingresaste una palabra");
+
+  palabra = palabra.toLowerCase();
+  let invertido = palabra.split("").reverse().join("");
+
+  if (palabra === invertido) {
+    console.info(`"${palabra}" es palindromo`);
+  } else {
+    console.info("No es palindromo");
+  }
+};
+palindromo();
+palindromo("hola mundo");
+palindromo("sAlas");
